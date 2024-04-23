@@ -1,4 +1,64 @@
 ﻿<Properties StartupConfiguration="{710842C4-66CD-4542-8543-08403053C4FD}|https" GitUserInfo="UsingMD">
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.MagicVilla__VillaAPI PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" FirstBuild="True" />
+  <MultiItemStartupConfigurations>
+    <MultiItemSolutionRunConfiguration Id="Multiple Projects" Name="Multiple Projects">
+      <Items>
+        <StartupItem ItemId="{710842C4-66CD-4542-8543-08403053C4FD}" ItemName="MagicVilla_VillaAPI" ConfigurationId="https" />
+        <StartupItem ItemId="{23E7A823-3818-4AAC-ADAA-0EA578259006}" ItemName="MagicVilla_Web" ConfigurationId="https" />
+      </Items>
+    </MultiItemSolutionRunConfiguration>
+  </MultiItemStartupConfigurations>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.MagicVilla__Web PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="MagicVilla_VillaAPI/Migrations/20240421233840_RecreateLocalUsersTable.cs">
+    <Files>
+      <File FileName="MagicVilla_Web/Controllers/VillaNumberController.cs" />
+      <File FileName="MagicVilla_Web/Views/VillaNumber/CreateVillaNumber.cshtml" />
+      <File FileName="MagicVilla_Web/Views/VillaNumber/DeleteVillaNumber.cshtml" />
+      <File FileName="MagicVilla_Web/Views/VillaNumber/UpdateVillaNumber.cshtml" />
+      <File FileName="MagicVilla_Web/Views/Villa/DeleteVilla.cshtml" />
+      <File FileName="MagicVilla_Web/Controllers/VillaController.cs" />
+      <File FileName="MagicVilla_Web/Views/VillaNumber/IndexVillaNumber.cshtml" />
+      <File FileName="MagicVilla_Web/Views/Shared/_Notification.cshtml" />
+      <File FileName="MagicVilla_Web/Views/Shared/_Layout.cshtml" />
+      <File FileName="MagicVilla_VillaAPI/Models/LocalUser.cs" Line="1" Column="1" />
+      <File FileName="MagicVilla_VillaAPI/Data/ApplicationDbContext.cs" Line="83" Column="1" />
+      <File FileName="MagicVilla_VillaAPI/Models/Dto/LoginRequestDTO.cs" />
+      <File FileName="MagicVilla_VillaAPI/Models/Dto/LoginResponseDTO.cs" />
+      <File FileName="MagicVilla_VillaAPI/Models/Dto/RegistrationRequestDTO.cs" />
+      <File FileName="MagicVilla_VillaAPI/Repository/IRepository/IUserRepository.cs" />
+      <File FileName="MagicVilla_VillaAPI/Repository/UserRepository.cs" Line="24" Column="26" />
+      <File FileName="MagicVilla_VillaAPI/Models/Villa.cs" />
+      <File FileName="MagicVilla_VillaAPI/Program.cs" />
+      <File FileName="MagicVilla_VillaAPI/MappingConfig.cs" />
+      <File FileName="MagicVilla_VillaAPI/Migrations/20240421233014_addUsersToDb.cs" Line="90" Column="1" />
+      <File FileName="MagicVilla_VillaAPI/Migrations/20240415141207_AddVillaTable.cs" Line="1" Column="1" />
+      <File FileName="MagicVilla_VillaAPI/Migrations/20240421233840_RecreateLocalUsersTable.cs" Line="81" Column="29" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="MagicVilla_VillaAPI" expanded="True">
+            <Node name="MagicVilla_VillaAPI" expanded="True">
+              <Node name="Data" expanded="True" />
+              <Node name="Migrations">
+                <Node name="20240421233840_RecreateLocalUsersTable.cs" selected="True" />
+              </Node>
+              <Node name="Models" expanded="True" />
+              <Node name="Repository" expanded="True">
+                <Node name="IRepository" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="MagicVilla_Web" expanded="True">
+              <Node name="Controllers" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.MagicVilla__VillaAPI PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
 </Properties>

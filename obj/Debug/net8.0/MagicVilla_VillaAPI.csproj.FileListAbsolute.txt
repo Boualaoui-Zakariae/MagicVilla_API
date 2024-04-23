@@ -1,0 +1,5 @@
+/Users/mac/DotNet/MagicVillaVS/MagicVilla_VillaAPI/obj/Debug/net8.0/MagicVilla_VillaAPI.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mac/DotNet/MagicVillaVS/MagicVilla_VillaAPI/obj/Debug/net8.0/MagicVilla_VillaAPI.AssemblyInfoInputs.cache
+/Users/mac/DotNet/MagicVillaVS/MagicVilla_VillaAPI/obj/Debug/net8.0/MagicVilla_VillaAPI.AssemblyInfo.cs
+/Users/mac/DotNet/MagicVillaVS/MagicVilla_VillaAPI/obj/Debug/net8.0/MagicVilla_VillaAPI.csproj.CoreCompileInputs.cache
+/Users/mac/DotNet/MagicVillaVS/MagicVilla_VillaAPI/obj/Debug/net8.0/MagicVilla_VillaAPI.sourcelink.json
