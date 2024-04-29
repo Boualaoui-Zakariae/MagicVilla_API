@@ -245,3 +245,8 @@
 /Users/mac/DotNet/MagicVillaVS/MagicVilla_VillaAPI/MagicVilla_Web/bin/Debug/net7.0/MagicVilla_Utility.dll
 /Users/mac/DotNet/MagicVillaVS/MagicVilla_VillaAPI/MagicVilla_Web/bin/Debug/net7.0/MagicVilla_Utility.pdb
 /Users/mac/DotNet/MagicVillaVS/MagicVilla_VillaAPI/MagicVilla_Web/obj/Debug/net7.0/MagicVilla_Web.csproj.CopyComplete
+/Users/mac/DotNet/MagicVillaVS/MagicVilla_VillaAPI/MagicVilla_Web/bin/Debug/net7.0/Microsoft.IdentityModel.Abstractions.dll
+/Users/mac/DotNet/MagicVillaVS/MagicVilla_VillaAPI/MagicVilla_Web/bin/Debug/net7.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/mac/DotNet/MagicVillaVS/MagicVilla_VillaAPI/MagicVilla_Web/bin/Debug/net7.0/Microsoft.IdentityModel.Logging.dll
+/Users/mac/DotNet/MagicVillaVS/MagicVilla_VillaAPI/MagicVilla_Web/bin/Debug/net7.0/Microsoft.IdentityModel.Tokens.dll
+/Users/mac/DotNet/MagicVillaVS/MagicVilla_VillaAPI/MagicVilla_Web/bin/Debug/net7.0/System.IdentityModel.Tokens.Jwt.dll

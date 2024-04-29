@@ -10,11 +10,14 @@ using System.Collections.Generic;
 using MagicVilla_VillaAPI.Repository.IRepository;
 using System.Net;
 using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Authorization;
+using System.Data;
 
-namespace MagicVilla_VillaAPI.Controllers
+namespace MagicVilla_VillaAPI.Controllers.v1
 {
-    [Route("api/VillaNumberAPI")]
+    [Route("api/v{version:apiVersion}/VillaNumberAPI")]
     [ApiController]
+    [ApiVersion("1.0")]
     public class VillaNumberAPIController : ControllerBase
     {
         private readonly IVillaNumberRepository _dbVillaNumber;
@@ -28,7 +31,10 @@ namespace MagicVilla_VillaAPI.Controllers
             _mapper = mapper;
             this._response = new();
         }
+
+
         //+============================GetAll
+        [MapToApiVersion("1.0")]
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<APIResponse>> GetVillaNumbers()
@@ -42,10 +48,16 @@ namespace MagicVilla_VillaAPI.Controllers
             }
             catch (Exception ex)
             {
-                _response.IsSuccess = false;
+                //_response.IsSuccess = false;
                 _response.ErrorMessages = new List<string>() { ex.ToString() };
                 return _response;
             }
+        }
+
+        [HttpGet("GetString")]
+        public IEnumerable<string> Get()
+        {
+            return new string[] { "String1", "string2" };
         }
 
         //+============================Get
@@ -75,13 +87,14 @@ namespace MagicVilla_VillaAPI.Controllers
             }
             catch (Exception ex)
             {
-                _response.IsSuccess = false;
+                //_response.IsSuccess = false;
                 _response.ErrorMessages = new List<string>() { ex.ToString() };
                 return _response;
             }
         }
 
         //+============================Create
+        [Authorize(Roles = "admin")]
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -114,7 +127,7 @@ namespace MagicVilla_VillaAPI.Controllers
             }
             catch (Exception ex)
             {
-                _response.IsSuccess = false;
+                //_response.IsSuccess = false;
                 _response.ErrorMessages = new List<string>() { ex.ToString() };
                 return _response;
             }
@@ -122,6 +135,7 @@ namespace MagicVilla_VillaAPI.Controllers
         }
 
         //+============================Delete
+        [Authorize(Roles = "admin")]
         [HttpDelete("{id:int}", Name = "DeleteVillaNumber")]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -136,12 +150,12 @@ namespace MagicVilla_VillaAPI.Controllers
 
                 await _dbVillaNumber.RemoveAsync(villaNumber);
                 _response.StatusCode = HttpStatusCode.NoContent;
-                _response.IsSuccess = true;
+                //_response.IsSuccess = true;
                 return Ok(_response);
             }
             catch (Exception ex)
             {
-                _response.IsSuccess = false;
+                //_response.IsSuccess = false;
                 _response.ErrorMessages = new List<string>() { ex.ToString() };
                 return _response;
             }
@@ -149,6 +163,7 @@ namespace MagicVilla_VillaAPI.Controllers
         }
 
         //+============================Update
+        [Authorize(Roles = "admin")]
         [HttpPut("{id:int}", Name = "UpdateVillaNumber")]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status200OK)]
@@ -169,12 +184,12 @@ namespace MagicVilla_VillaAPI.Controllers
                 await _dbVillaNumber.UpdateAsync(model); 
 
                 _response.StatusCode = HttpStatusCode.NoContent;
-                _response.IsSuccess = true;
+                //_response.IsSuccess = true;
                 return Ok(_response);
             }
             catch (Exception ex)
             {
-                _response.IsSuccess = false;
+                //_response.IsSuccess = false;
                 _response.ErrorMessages = new List<string>() { ex.ToString() };
                 return _response;
             }

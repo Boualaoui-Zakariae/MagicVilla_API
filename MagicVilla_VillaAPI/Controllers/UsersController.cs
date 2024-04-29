@@ -12,9 +12,10 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace MagicVilla_VillaAPI.Controllers
 {
-    [Route("api/UsersAuth")]
+    [Route("api/v{version:apiVersion}/UsersAuth")]
     [ApiController]
-    public class UsersController : Controller
+    [ApiVersionNeutral]
+    public class UsersController : ControllerBase
     {
 
         private readonly IUserRepository _userRepo;
@@ -33,12 +34,12 @@ namespace MagicVilla_VillaAPI.Controllers
             if (loginResponse.User == null || string.IsNullOrEmpty(loginResponse.Token))
             {
                 _response.StatusCode = HttpStatusCode.BadRequest;
-                _response.IsSuccess = false;
+                //_response.IsSuccess = false;
                 _response.ErrorMessages.Add("Username or password is incorrect");
                 return BadRequest(_response);
             }
             _response.StatusCode = HttpStatusCode.OK;
-            _response.IsSuccess = true;
+            //_response.IsSuccess = true;
             _response.Result = loginResponse;
             return Ok(_response);
         }
@@ -51,7 +52,7 @@ namespace MagicVilla_VillaAPI.Controllers
             if (!ifUserNameUnique)
             {
                 _response.StatusCode = HttpStatusCode.BadRequest;
-                _response.IsSuccess = false;
+                //_response.IsSuccess = false;
                 _response.ErrorMessages.Add("Username already exists");
                 return BadRequest(_response);
             }
@@ -59,12 +60,12 @@ namespace MagicVilla_VillaAPI.Controllers
             if (user == null)
             {
                 _response.StatusCode = HttpStatusCode.BadRequest;
-                _response.IsSuccess = false;
+                //_response.IsSuccess = false;
                 _response.ErrorMessages.Add("Error while registring");
                 return BadRequest(_response);
             }
             _response.StatusCode = HttpStatusCode.OK;
-            _response.IsSuccess = true;
+            //_response.IsSuccess = true;
             return Ok(_response);
         }
     }
